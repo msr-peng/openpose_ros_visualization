@@ -5,6 +5,11 @@ This work is develped from [here](https://github.com/stevenjj/openpose_ros). I m
 
 When a depth image is synchronized with the RGB image (RGB-D image), a 3d extractor node has been implemented to obtain 3d pose estimation from the 2d pose estimation gien by OpenPose through the projection of the 2d pose estimation onto the point-cloud of the depth image. Also, a visualization node for the 3d results has been implemented.
 
+**NOTE**: Instead of doing painful following installation steps, I provide **docker image** file which support OpenPose development environment as well as OpenGL to do visualization, you can directly access it from [here](https://cloud.docker.com/repository/registry-1.docker.io/bluebirdpp/openpose). Or you can just run the following command to get the docker image:
+   ```bash
+   docker pull bluebirdpp/openpose:latest
+   ```
+
 # Install OpenPose Library
 Install openpose and its dependencies at [here](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation.md).
     
