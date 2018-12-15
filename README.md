@@ -18,17 +18,21 @@ Install openpose and its dependencies at [here](https://github.com/CMU-Perceptua
 ![image resolution](https://github.com/msr-peng/openpose_ros/blob/master/images/resolution.png)
     
 Now you can run the code. First connect a RGB camera and run the corresponding ROS drivers to start to publish the images (they must be image_raw). For example I used ASUS Xtion Pro Live camera and my command was:
+    
    ```bash
    roslaunch openni2_launch openni2.launch
    ```
+    
 You should get RGB and depth streams in `rqt_image_view`.
     
 Then, initialize the 2d detection service node:
+    
     ```bash
     rosrun openpose_ros_pkg openpose_ros_node_3d
     ```
     
 If everything works fine you should see the following output in your shell:
+    
     ```bash
     [INFO] [1501140533.950685432]: Initialization Successful!
     ```
