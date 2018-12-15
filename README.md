@@ -14,8 +14,9 @@ Install openpose and its dependencies at [here](https://github.com/CMU-Perceptua
 
 # Running OpenPose ROS Wrapper and 3d Pose Extractor
 **NOTE**: I used ASUS Xtion Pro Live camera, and run it by `openni2_launch` default ROS parameter, so the image resolution is `480*640`. If you get images stream in different resolution, you should modify the following two lines in `skeleton_extract_3d_node.cpp` manually to match you image resolution.
+    
 ![image resolution](https://github.com/msr-peng/openpose_ros/blob/master/images/resolution.png)
-
+    
 Now you can run the code. First connect a RGB camera and run the corresponding ROS drivers to start to publish the images (they must be image_raw). For example I used ASUS Xtion Pro Live camera and my command was:
    ```bash
    roslaunch openni2_launch openni2.launch
