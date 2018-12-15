@@ -28,18 +28,20 @@ You should get RGB and depth streams in `rqt_image_view`.
     
 Then, initialize the 2d detection service node:
     
-    ```bash
-    rosrun openpose_ros_pkg openpose_ros_node_3d
-    ```
+   ```bash
+   rosrun openpose_ros_pkg openpose_ros_node_3d
+   ```
 If everything works fine you should see the following output in your shell:
     
-    ```bash
-    [INFO] [1501140533.950685432]: Initialization Successful!
-    ```
+   ```bash
+   [INFO] [1501140533.950685432]: Initialization Successful!
+   ```
+    
 Finally, to get the 2d poses of the images from the camera and visualize the output, run:
    ```bash
    rosrun skeleton_extract_3d skeleton_extract_3d_node_test
    ```
+    
 Then, images stream with markered skeleton keypoints should be published on topic `/openpose_ros/skeleton_3d/detected_poses_image`, you can visualize it in `rqt_image_view`, and 3D skeleton keypoints information should published on topic `/openpose_ros/skeleton_3d/detected_poses_keypoints_3d`.
 
 # Visualize 3D skeleton keypoints on Rviz
