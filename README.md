@@ -7,7 +7,9 @@ When a depth image is synchronized with the RGB image (RGB-D image), a 3d extrac
 
 # Install OpenPose Library
 Install openpose and its dependencies at [here](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation.md).
+    
 **Potential issues about OpenPose Installation**
+    
 * Your OpenPose would better build with the same version of OpenCV which comes with ROS, and ROS built-in OpenCV might located in `/opt/ros/kinetic/include`. Otherwise it would cause some problems when operating with image.
 
 * If you choose to build OpenPose by your own custom caffe, you should be careful with your caffe's version. The latest OpenPose Library (commit number `5295f2f`) is only compatible with [caffe](https://github.com/BVLC/caffe) before Aug 14, 2018 (commit number `4353628`).
@@ -47,8 +49,8 @@ Then, images stream with markered skeleton keypoints should be published on topi
 If you want to change the color, shape, size etc. of the markers, you need to go to `/skeleton_extract_3d/src/skeleton_extract_3d_visualization_node.cpp` to modify related code manually. To see the options you have go [here](http://wiki.ros.org/rviz/DisplayTypes/Marker).
 To set the options of the bodyjoints:
     
-![Body Joints Marker](joints_marker.png)
+![Body Joints Marker](https://github.com/msr-peng/openpose_ros/blob/master/images/joints_marker.png)
     
 To set the options of the skeletons:
     
-![Skeletons Marker](skeletons_marker.png)
+![Skeletons Marker](https://github.com/msr-peng/openpose_ros/blob/master/images/skeletons_marker.png)
