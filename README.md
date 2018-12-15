@@ -24,7 +24,6 @@ Now you can run the code. First connect a RGB camera and run the corresponding R
    ```bash
    roslaunch openni2_launch openni2.launch
    ```
-    
 You should get RGB and depth streams in `rqt_image_view`.
     
 Then, initialize the 2d detection service node:
@@ -32,13 +31,11 @@ Then, initialize the 2d detection service node:
     ```bash
     rosrun openpose_ros_pkg openpose_ros_node_3d
     ```
-    
 If everything works fine you should see the following output in your shell:
     
     ```bash
     [INFO] [1501140533.950685432]: Initialization Successful!
     ```
-    
 Finally, to get the 2d poses of the images from the camera and visualize the output, run:
    ```bash
    rosrun skeleton_extract_3d skeleton_extract_3d_node_test
