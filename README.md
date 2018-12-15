@@ -53,3 +53,8 @@ To set the options of the bodyjoints:
 To set the options of the skeletons:
     
 ![Skeletons Marker](https://github.com/msr-peng/openpose_ros/blob/master/images/skeletons_marker.png)
+
+Finally, start `Rviz` to visualize 3D skeleton tracking results (set `/camera_depth_frame` as world frame):
+   ```bash
+   rosrun rviz rviz -f /camera_depth_frame
+   ```
