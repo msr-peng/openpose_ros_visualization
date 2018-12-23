@@ -70,9 +70,9 @@ public:
     // Markers will be spheres
     marker.type = visualization_msgs::Marker::SPHERE_LIST;
     marker.action = visualization_msgs::Marker::ADD;
-    marker.scale.x = 0.15;
-    marker.scale.y = 0.15;
-    marker.scale.z = 0.15;
+    marker.scale.x = 0.3;
+    marker.scale.y = 0.3;
+    marker.scale.z = 0.3;
     // Joints are red
     marker.color.a = 1.0;
     marker.color.r = 1.0;
@@ -302,12 +302,83 @@ public:
 			}
 		}
 	}
-/*	else if (bodypart_idx == 18)
+	else if (bodypart_idx == 18)
 	{
-		if (PointISValid(person_msg.chest))
-        	{marker.points.push_back(AddPoint(person_msg.chest));}
+		if (PointISValid(person_msg.left_ear)){
+        	marker.points.push_back(AddPoint(person_msg.left_ear));
+			// Draw line between left eye and left ear
+			if (PointISValid(person_msg.left_eye)){
+				skeleton.points.push_back(AddPoint(person_msg.left_eye));
+				skeleton.points.push_back(AddPoint(person_msg.left_ear));
+			}
+		}
 	}
-*/
+	else if (bodypart_idx == 19)
+	{
+		if (PointISValid(person_msg.left_big_toe)){
+        	marker.points.push_back(AddPoint(person_msg.left_big_toe));
+			// Draw line between left big toe and left ankle
+			if (PointISValid(person_msg.left_ankle)){
+				skeleton.points.push_back(AddPoint(person_msg.left_ankle));
+				skeleton.points.push_back(AddPoint(person_msg.left_big_toe));
+			}
+		}
+	}
+	else if (bodypart_idx == 20)
+	{
+		if (PointISValid(person_msg.left_small_toe)){
+        	marker.points.push_back(AddPoint(person_msg.left_small_toe));
+			// Draw line between left small toe and left big toe
+			if (PointISValid(person_msg.left_big_toe)){
+				skeleton.points.push_back(AddPoint(person_msg.left_big_toe));
+				skeleton.points.push_back(AddPoint(person_msg.left_small_toe));
+			}
+		}
+	}
+	else if (bodypart_idx == 21)
+	{
+		if (PointISValid(person_msg.left_heel)){
+        	marker.points.push_back(AddPoint(person_msg.left_heel));
+			// Draw line between left heel and left ankle
+			if (PointISValid(person_msg.left_ankle)){
+				skeleton.points.push_back(AddPoint(person_msg.left_ankle));
+				skeleton.points.push_back(AddPoint(person_msg.left_heel));
+			}
+		}
+	}
+	else if (bodypart_idx == 22)
+	{
+		if (PointISValid(person_msg.right_big_toe)){
+        	marker.points.push_back(AddPoint(person_msg.right_big_toe));
+			// Draw line between right big toe and right ankle
+			if (PointISValid(person_msg.right_ankle)){
+				skeleton.points.push_back(AddPoint(person_msg.right_ankle));
+				skeleton.points.push_back(AddPoint(person_msg.right_big_toe));
+			}
+		}
+	}
+	else if (bodypart_idx == 23)
+	{
+		if (PointISValid(person_msg.right_small_toe)){
+        	marker.points.push_back(AddPoint(person_msg.right_small_toe));
+			// Draw line between right small toe and right big toe
+			if (PointISValid(person_msg.right_big_toe)){
+				skeleton.points.push_back(AddPoint(person_msg.right_big_toe));
+				skeleton.points.push_back(AddPoint(person_msg.right_small_toe));
+			}
+		}
+	}
+	else if (bodypart_idx == 24)
+	{
+		if (PointISValid(person_msg.right_heel)){
+        	marker.points.push_back(AddPoint(person_msg.right_heel));
+			// Draw line between right heel and right ankle
+			if (PointISValid(person_msg.right_ankle)){
+				skeleton.points.push_back(AddPoint(person_msg.right_ankle));
+				skeleton.points.push_back(AddPoint(person_msg.right_heel));
+			}
+		}
+	}
     }
   
   // Publish markers
